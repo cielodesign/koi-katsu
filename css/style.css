@@ -733,6 +733,15 @@ input, select {
   margin-bottom: 16px;
 }
 
+.rank_item-wrap p {
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+}
+
+.rank_item-wrap p strong {
+  color: #f47da2;
+}
+
 .rank_item-kuchikomi {
   display: -webkit-box;
   display: -webkit-flex;

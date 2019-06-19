@@ -334,6 +334,14 @@
 		&-text {
 			@include text;
 		}
+		&-wrap {
+			p {
+				@include text;
+				strong {
+					color: $color-primary;
+				}
+			}
+		}
 		&-kuchikomi {
 			display: flex;
 			justify-content: space-between;
