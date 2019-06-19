@@ -1,0 +1,80 @@
+
+// Colors
+//
+// Grayscale and brand colors
+
+$color-primary:              #f47da2 !default;
+$color-second-primary:       #40b6b1 !default;
+$color-dark:                 #595858 !default;
+$color-text:                 #333333 !default;
+$color-white:                #fff !default;
+$color-white-opacity:        rgba($color-white,.8) !default;
+$color-white-opacity-light:  rgba($color-white,.5) !default;
+$color-white-opacity-lighter:rgba($color-white,.2) !default;
+$color-white-opacity-lightest:rgba($color-white,.1) !default;
+$color-black:                #000000 !default;
+$color-green:                #13b5b1 !default;
+$color-green-bg:             #77cfca !default;
+$color-green-bg-light:       #defaf8 !default;
+$color-coral:                #f97c91 !default;
+$color-pink:                 #f64c90 !default;
+$color-pink-dark:            #f05f8b !default;
+$color-pink-darker:          #ea3366 !default;
+$color-pink-bg:              #e57696 !default;
+$color-pink-bg-light:        #f7e4e7 !default;
+$color-pink-bg-lighter:      #f57dad !default;
+$color-orange:               #f8b551 !default;
+$color-skyblue:              #7ecef4 !default;
+$color-blue:                 #5587d9 !default;
+$color-blue-bg:              #85b2fa !default;
+$color-gold:                 #dcc017 !default;
+$color-silver:               #b1b6b8 !default;
+$color-copper:               #e28740 !default;
+$color-yellow:               #fcd70b !default;
+$color-yellow-light:         #fdeb85 !default;
+$color-yellow-bg:            #e7d468 !default;
+$color-yellow-bg-light:      #fdf8df !default;
+$color-border:               #c9caca !default;
+$color-gray:                 #9fa0a0 !default;
+$color-gray-bg:              #b5b5b5 !default;
+$color-gray-bg-light:        #f4eae8 !default;
+$color-gray-bg-lighter:      #efefef !default;
+$color-gray-bg-dark:         #b5b5b5 !default;
+$color-link:                 #1589d2 !default;
+$color-purple:               #758de5 !default;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$bg-color-body:             $color-gray-bg !default;
+$color-body:                $color-text !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-hover-decoration:     none !default;
+
+
+// // Typography
+// //
+// // Font, line-height, and color for body text, headings, and more.
+
+$font-family-primary:        "Noto Sans JP", 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic',Avenir, "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, sans-serif;
+$font-family-second:         'Quicksand', sans-serif;
+$font-family-selif:          'PT Serif', serif;
+$font-family-damion:         'Damion', cursive;
+$font-family-awesome:        "Font Awesome 5 Pro";
+
+$font-size-root:             100% !default;
+
+$line-height:                1.6 !default;
+
+$headings-margin-bottom:     .75rem !default;
+$headings-font-weight:       400 !default;
+$headings-line-height:       1.2 !default;
+
+$icon-margin:                .4rem !default;

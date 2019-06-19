@@ -1,0 +1,436 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = '地域トップページ'
+  - metas.url = 'http://XXXX.com/'
+  - metas.image = 'http://XXXX.com/image.jpg'
+  - metas.site_name = 'サイト名'
+  - metas.description = '説明'
+  include _config
+  - var key = 'areaindex'
+block append meta
+  +meta(metas)
+  include _inc_meta_facebook
+  +inc_meta_facebook(metas)
+block body
+  include _header.pug
+  div.keyVisual.contentsmargin
+    figure.keyVisual_img
+      img(src="./img/areaindex/key01.jpg" alt="")
+      figcaption.keyVisual_caption 福岡で出会いを探すならココ！
+        br
+        | #[span.keyVisual_caption-large おすすめ出会いランキング]
+  div.subindex.contain
+    p.subindex_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+    div.point
+      h2.point_ttl <i class="fas fa-exclamation"></i>#[span.selif Point!]
+      p.point_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+    p.subindex_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+  div.subrank.subcon
+    h2.subcon_ttl 福岡の恋活オススメランキング
+    div.contain
+      p.subcon_text 福岡で人気の恋活サイトをご紹介します！という内容のテキストが入ります。
+      div.subrank_list
+        div.subrank_list-item
+          a(href="#rank1") 
+            p.rank_num.rank_num01
+              img(src="./img/common/icon-croun01.png" alt="")
+              br
+              | 第#[span.rank_num-large 1]位
+            div.subrank_list-info
+              h3.rank_subttl ペアーズ(Pairs)
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star.rank_evaluation-star45 ★★★★★]
+        div.subrank_list-item
+          a(href="#rank2")
+            p.rank_num.rank_num02
+              img(src="./img/common/icon-croun02.png" alt="")
+              br
+              | 第#[span.rank_num-large 2]位
+            div.subrank_list-info
+              h3.rank_subttl ハッピーメール
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star.rank_evaluation-star40 ★★★★★]
+        div.subrank_list-item
+          a(href="#rank3")
+            p.rank_num.rank_num03
+              img(src="./img/common/icon-croun03.png" alt="")
+              br
+              | 第#[span.rank_num-large 3]位
+            div.subrank_list-info
+              h3.rank_subttl with(ウィズ)
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star.rank_evaluation-star13 ★★★★★]
+        div.subrank_list-item
+          a(href="#rank4")
+            p.rank_num.rank_num04
+              img(src="./img/common/icon-croun04.png" alt="")
+              br
+              | 第#[span.rank_num-large 4]位
+            div.subrank_list-info
+              h3.rank_subttl ゼクシィ恋結び
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+        div.subrank_list-item
+          a(href="#rank5")
+            p.rank_num.rank_num05
+              img(src="./img/common/icon-croun05.png" alt="")
+              br
+              | 第#[span.rank_num-large 5]位
+            div.subrank_list-info
+              h3.rank_subttl Poiboy(ポイボーイ) 
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+    div.rank
+      div.contain
+        article.rank_item#rank1
+          div.rank_item-top
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/icon-pairs.png" alt="")
+            div.rank_item-info
+              p.rank_num.rank_num01
+                img(src="./img/common/icon-croun01.png" alt="")
+                | 第#[span.rank_num-large 1]位
+              h3.rank_subttl ペアーズ(Pairs)
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+          div.rank_item-bnr
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/bnr_pairs.jpg" alt="Pairsだったから安心して恋人が探せました！")
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          div.rank_item-bottom
+            table
+              tr
+                th 運営会社
+                td 株式会社なまえなまえ
+              tr
+                th 会員数
+                td 2000万⼈
+              tr
+                th 男⼥比
+                td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+              tr
+                th 利⽤料
+                td ⼥性無料
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          p.rank_item-text #[span.pink テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります]テキストがはいりますテキストがはいりますテキストがはいります。
+          div.kuchikomi
+            h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>ユーザーの口コミ
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 30]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 20]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            p.kuchikomi_btn
+              a(href="" target="_blank") ペアーズ(Pairs)を詳しく見る
+        article.rank_item#rank2
+          div.rank_item-top
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/icon-happymail.png" alt="")
+            div.rank_item-info
+              p.rank_num.rank_num02
+                img(src="./img/common/icon-croun02.png" alt="")
+                | 第#[span.rank_num-large 2]位
+              h3.rank_subttl ハッピーメール
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+          div.rank_item-bnr
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/bnr_happymail.jpg" alt="出会えた確率74.5%")
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          div.rank_item-bottom
+            table
+              tr
+                th 運営会社
+                td 株式会社なまえなまえ
+              tr
+                th 会員数
+                td 2000万⼈
+              tr
+                th 男⼥比
+                td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+              tr
+                th 利⽤料
+                td ⼥性無料
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          p.rank_item-text #[span.pink テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります]テキストがはいりますテキストがはいりますテキストがはいります。
+          div.kuchikomi
+            h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>ユーザーの口コミ
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 30]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 20]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            p.kuchikomi_btn
+              a(href="" target="_blank") ハッピーメールを詳しく見る
+        article.rank_item#rank3
+          div.rank_item-top
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/icon-with.png" alt="")
+            div.rank_item-info
+              p.rank_num.rank_num03
+                img(src="./img/common/icon-croun03.png" alt="")
+                | 第#[span.rank_num-large 3]位
+              h3.rank_subttl with(ウィズ)
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+          div.rank_item-bnr
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/bnr_with.jpg" alt="女子はいつだって待ちなんだから")
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          div.rank_item-bottom
+            table
+              tr
+                th 運営会社
+                td 株式会社なまえなまえ
+              tr
+                th 会員数
+                td 2000万⼈
+              tr
+                th 男⼥比
+                td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+              tr
+                th 利⽤料
+                td ⼥性無料
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          p.rank_item-text #[span.pink テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります]テキストがはいりますテキストがはいりますテキストがはいります。
+          div.kuchikomi
+            h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>ユーザーの口コミ
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 30]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 20]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            p.kuchikomi_btn
+              a(href="" target="_blank") with(ウィズ)を詳しく見る
+        article.rank_item#rank4
+          div.rank_item-top
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/icon-zexy.png" alt="")
+            div.rank_item-info
+              p.rank_num.rank_num04
+                img(src="./img/common/icon-croun04.png" alt="")
+                | 第#[span.rank_num-large 4]位
+              h3.rank_subttl ゼクシィ恋結び
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+          div.rank_item-bnr
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/bnr_zexy.jpg" alt="信頼できる婚活アプリ")
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          div.rank_item-bottom
+            table
+              tr
+                th 運営会社
+                td 株式会社なまえなまえ
+              tr
+                th 会員数
+                td 2000万⼈
+              tr
+                th 男⼥比
+                td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+              tr
+                th 利⽤料
+                td ⼥性無料
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          p.rank_item-text #[span.pink テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります]テキストがはいりますテキストがはいりますテキストがはいります。
+          div.kuchikomi
+            h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>ユーザーの口コミ
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 30]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 20]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            p.kuchikomi_btn
+              a(href="" target="_blank") ゼクシィ恋結びを詳しく見る
+        article.rank_item#rank5
+          div.rank_item-top
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/icon-poiboy.png" alt="")
+            div.rank_item-info
+              p.rank_num.rank_num05
+                img(src="./img/common/icon-croun05.png" alt="")
+                | 第#[span.rank_num-large 5]位
+              h3.rank_subttl Poiboy(ポイボーイ) 
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+          div.rank_item-bnr
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/bnr_poiboy.jpg" alt="")
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          div.rank_item-bottom
+            table
+              tr
+                th 運営会社
+                td 株式会社なまえなまえ
+              tr
+                th 会員数
+                td 2000万⼈
+              tr
+                th 男⼥比
+                td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+              tr
+                th 利⽤料
+                td ⼥性無料
+          p.rank_item-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+          p.rank_item-text #[span.pink テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります]テキストがはいりますテキストがはいりますテキストがはいります。
+          div.kuchikomi
+            h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>ユーザーの口コミ
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 30]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            article.kuchikomi_item
+              p.kuchikomi_attribute <i class="fas fa-grin"></i>
+                span.kuchikomi_attribute-detail
+                  | #[span.kuchikomi_attribute-num 20]代
+                  br
+                  | 女性
+              dl.kuchikomi_comment
+                dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+                  br
+                  | #[span.rank_evaluation-star ★★★★★]
+                dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+                  br
+                  | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            p.kuchikomi_btn
+              a(href="" target="_blank") Poiboy(ポイボーイ) を詳しく見る
+  div.hikaku.subcon
+    h2.subcon_ttl 恋活サイト比較表
+    div.contain
+      p.subcon_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+      table.hikaku_table
+        tr
+          th サイト名
+          th 総合評価
+          th オススメ用途
+          th 出会いやすさ
+        tr
+          td ペアーズ(Pairs)
+          td #[span.hikaku_star ★]#[span.rank_evaluation-num 5.0]
+          td 友活
+          td #[span.pink ◎]
+        tr
+          td ハッピーメール
+          td #[span.hikaku_star ★]#[span.rank_evaluation-num 5.0]
+          td 恋活
+          td #[span.pink ◎]
+        tr
+          td with(ウィズ)
+          td #[span.hikaku_star ★]#[span.rank_evaluation-num 5.0]
+          td 友活
+          td #[span.pink ◎]
+        tr
+          td ゼクシィ恋結び
+          td #[span.hikaku_star ★]#[span.rank_evaluation-num 5.0]
+          td 婚活
+          td #[span.pink ○]
+        tr
+          td Poiboy(ポイボーイ) 
+          td #[span.hikaku_star ★]#[span.rank_evaluation-num 5.0]
+          td 恋活
+          td #[span.pink ○]
+  div.merit.subcon
+    h2.subcon_ttl 福岡の恋活アプリのメリット
+    div.contain
+      p.subcon_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+      div.meritcon
+        h2.meritcon_ttl <i class="fas fa-star"></i>#[span.selif Merit!]
+        ul.meritcon_list
+          - for (var x = 0; x < 5; x++)
+            li.meritcon_list-item テキストがはいりますテキストがはいります
+      p.subcon_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+  include _footer.pug

@@ -1,0 +1,207 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input, select, textarea {
+	box-sizing: border-box;
+}
+
+html {
+	/* Sets a specific default `font-size` for user with `rem` type scales.*/
+	font-size: $font-size-root;
+	/* Changes the default tap highlight to be completely transparent in iOS.*/
+	-webkit-tap-highlight-color: rgba(#000,0);
+}
+
+body {
+	color: $color-body;
+	line-height: $line-height;
+	/*background: url(../img/common/bg_body.png) center center / cover no-repeat;*/
+	font-family: $font-family-primary;
+	font-weight: $headings-font-weight;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+strong {
+	font-weight: bold;
+}
+
+@mixin transition {
+	transition-duration:.5s;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	text-decoration: none;
+	&:hover {
+		opacity: .8;
+	}
+}
+.contain {
+	width: 96%;
+	margin: 0 auto;
+}
+
+input, select {
+	appearance: none;
+	border: none;
+}
+
+.pink { color: $color-primary; }
+.blue { color: $color-blue; }
+.alpha { font-family: $font-family-second; }
+.marker { background-color: #fff799; }
+.bgpink {
+	background: url(../img/common/bg_naname.png) $color-gray-bg-light repeat;
+}
+
+.btn {
+	margin: 0 calc(calc(30 / 690) * 100%) 24px;
+	a {
+		border: 1px solid $color-text;
+		display: block;
+		text-align: center;
+		background: $color-white;
+		color: $color-text;
+		position: relative;
+		font-size: 0.8125rem;
+		padding: 10px 6px;
+		&:after {
+			font-family: $font-family-awesome;
+			font-weight: 300;
+			content: "\f054";
+			position: absolute;
+			top: calc(50% - 10px);
+			right: 10px;
+		}
+	}
+}
+
+@mixin star($start: 60%, $end: 61%) {
+	background: linear-gradient(to right, $color-yellow 0%, $color-yellow $start, $color-gray-bg $end, $color-gray-bg 100%);
+	color: rgba(0,0,0,0);
+	background-clip: text;
+}
+
+@mixin waku($color: #56d3cd,$bgcolor: #f6fefd) {
+	background: $bgcolor;
+	border: 2px solid $color;
+	border-radius: 10px;
+	padding: 10px 10px 10px 0;
+	margin-bottom: 14px;
+	&_ttl {
+		background: $color;
+		color: $color-white;
+		font-size: 1.25rem;
+		font-family: $font-family-selif;
+		position: relative;
+		margin-bottom: 10px;
+		padding-right: 24px;
+		display: inline-flex;
+		align-items: center;
+		i {
+			margin-right: $icon-margin;
+			margin-left: $icon-margin;
+			font-size: 0.875rem;
+			background: $color-white;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			color: $color;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			border-width: 16px 10px;
+			border-style: solid;
+			border-color: transparent;
+			border-right-color: $bgcolor;
+		}
+	}
+	&_text, &_list {
+		margin-left: 10px;
+	}
+	&_text {
+		font-size: 0.75rem;
+	}
+	&_list {
+		font-size: 0.875rem;
+		&-item {
+			margin-bottom: 10px;
+			&:before {
+				content: "\f00c";
+				font-family: $font-family-awesome;
+				font-weight: 900;
+				color: $color-pink-dark;
+				background: $color-white;
+				border: 2px solid $color-gray-bg;
+				padding: 5px;
+				margin-right: $icon-margin;
+			}
+		}
+	}
+}
+
+@mixin text {
+	font-size: 0.75rem;
+	margin-bottom: 16px;
+}
+
+@mixin colorbtn($bgcolor: $color-green,$bordercolor: #0d7e7c,$fontsize: 0.875rem) {
+	width: 100%;
+	background: $bgcolor;
+	color: $color-white;
+	font-size: $fontsize;
+	padding: 15px 6px;
+	border-radius: 10px;
+	border-bottom: solid 2px $bordercolor;
+	display: block;
+	text-align: center;
+}
+
+@mixin fukidashi {
+	position: relative;
+	padding: 15px;
+	border: 2px solid $color-gray-bg;
+	border-radius: 10px;
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		top: 24px;
+	}
+	&:before {
+		left: -25px;
+		margin-top: -12px;
+		border: 12px solid transparent;
+		border-right: 14px solid $color-white;
+		z-index: 2;
+	}
+	&:after {
+		left: -30px;
+		margin-top: -14px;
+		border: 14px solid transparent;
+		border-right: 16px solid $color-gray-bg;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,140 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = 'ブログ'
+  - metas.url = 'http://XXXX.com/'
+  - metas.image = 'http://XXXX.com/image.jpg'
+  - metas.site_name = 'サイト名'
+  - metas.description = '説明'
+  include _config
+  - var key = 'blog'
+block append meta
+  +meta(metas)
+  include _inc_meta_facebook
+  +inc_meta_facebook(metas)
+block body
+  include _header.pug
+  header.bloghead.contentsmargin
+    div.contain
+      p.bloghead_name
+        span.bloghead_cat.cat-coral カテゴリ
+        span.bloghead_date 2019.05.08
+      h1.bloghead_ttl タイトルがはいりますタイトルがはいりますタイトルがはいります
+  div.keyVisual
+    figure.keyVisual_img
+      img(src="./img/blog/key.jpg" alt="")
+  div.contain.subcon.blog
+    article.writer
+      h2.writer_ttl WRITER
+      div.writer_prof
+        figure
+          img(src="./img/blog/writer.jpg" alt="")
+        dl.writer_info
+          dt.writer_name ライター名ライター名
+          dd.writer_text テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+    p.subcon_text テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+    div.toc
+      p.toc_ttl 目 次
+      ul.toc_list
+        - for (var x = 1; x < 6; x++)
+          li.toc_list-item
+            a(href="#sec0"+x) #{x}：目次内容がはいります
+    -
+      var items = [
+        {
+          itemNum: 1,
+          itemImg1: 'img01.jpg',
+          itemImg2: 'img02.jpg'
+        },
+        {
+          itemNum: 2,
+          itemImg1: 'img03.jpg',
+          itemImg2: 'img04.jpg'
+        },
+        {
+          itemNum: 3,
+          itemImg1: 'img05.jpg',
+          itemImg2: 'img06.jpg'
+        }
+      ]
+    each item in items
+      h2.blog_ttl(id="sec0"+item['itemNum']) 見出しがはいります見出しがはいります
+      figure.blog_img
+        img(src="./img/blog/"+item['itemImg1'] alt="")
+      p.subcon_text テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+      div.blog_writer
+        div.blog_writer-prof
+          figure
+            img(src="./img/blog/writer.jpg" alt="")
+          p.blog_writer-name ライター名
+        div.blog_comment
+          p.blog_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            br
+            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+      p.subcon_text テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+      h3.blog_subttl 見出しがはいります見出しがはいります
+      figure.blog_img
+        img(src="./img/blog/"+item['itemImg2'] alt="")
+      p.subcon_text テキストが入りますテキストが入りますテキストが入りますテキストが入ります#[span.marker テキストが入りますテキストが入りますテキストが入りますテキストが入ります]テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+    ul.sns
+      li.sns_item.sns_item-facebook
+        a(href="https://www.facebook.com/sharer/sharer.php?u=http://XXXX.com/" target="blank")
+          <i class="fab fa-facebook-f"></i>
+      li.sns_item.sns_item-twitter
+        a(href="http://twitter.com/share?url=http://XXXX.com/" target="blank")
+          <i class="fab fa-twitter"></i>
+      li.sns_item.sns_item-line
+        a(href="http://line.me/R/msg/text/?http://XXXX.com/" target="blank")
+          img(src="./img/common/icon-line.svg")
+    article.writer
+      h2.writer_ttl WRITER
+      div.writer_prof
+        figure
+          img(src="./img/blog/writer.jpg" alt="")
+        dl.writer_info
+          dt.writer_name ライター名ライター名
+          dd.writer_text テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+    ul.tag
+      - var list = ['出会い', '福岡', 'ハッピーメール', '結婚パーティ', '出会い系ランキング', '男ウケ', '恋活']
+        each item in list
+          li.tag_item
+            a(href="") #{item}
+  div.article.subcon
+    h2.subcon_ttl あなたにオススメ！
+    div.contain
+      div.article_contents
+        -
+          var items = [
+            {
+              itemNum: 1,
+              itemName: 'cat-green'
+            },
+            {
+              itemNum: 2,
+              itemName: 'cat-coral'
+            },
+            {
+              itemNum: 3,
+              itemName: 'cat-greenlight'
+            },
+            {
+              itemNum: 4,
+              itemName: 'cat-orange'
+            },
+            {
+              itemNum: 5,
+              itemName: 'cat-sky'
+            }
+          ]
+        each item in items
+          article.article_item
+            figure
+              img(src="./img/index/newarticle0"+item['itemNum']+".jpg" alt="")
+            div.article_item-info
+              p.article_item-name
+                span.article_item-cat(class=item['itemName']) カテゴリー
+                span.article_item-date 2019.05.08
+              p.article_item-text 【令和元年】ぶっちゃけどの婚活アプリが熱いの？⼈気アプリ10社を徹底比較！
+      p.btn
+        a(href="") 記事⼀覧を⾒る
+  include _footer.pug

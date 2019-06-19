@@ -1,0 +1,25 @@
+header.main_header.js-hiraku-header-fixed 
+  //- div.icon-menu #[span]#[span]#[span]
+  button.navbar-toggle.collapsed.js-offcanvas-btn(type="button") #[span.hiraku-open-btn-line]
+  if key == 'top'
+    h1.main_header-ttl
+      img(src="./img/common/logo.png" alt="恋活.com")
+  else if key == 'areaindex'
+    div.main_header-ttlarea
+      h1.main_header-ttl
+        img(src="./img/common/logo.png" alt="恋活.com")
+      p.main_header-areaname #{pages.areaindex.name}
+  else
+    div.main_header-ttlarea
+      p.main_header-ttl
+        img(src="./img/common/logo.png" alt="恋活.com")
+      p.main_header-areaname #{pages.blog.name}
+  p.icon-search
+    a(href="#search") <i class="far fa-search"></i>
+div.sidebar-offcanvas
+  div.list-group.js-offcanvas
+    h3.sidebar_ttl テキストテキスト
+    ul.sidebar_menu
+      - for (var x = 0; x < 6; x++)
+        li.sidebar_menu-item
+          a(href="") テキストテキスト

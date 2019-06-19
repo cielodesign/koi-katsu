@@ -1,0 +1,185 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = '地域詳細'
+  - metas.url = 'http://XXXX.com/'
+  - metas.image = 'http://XXXX.com/image.jpg'
+  - metas.site_name = 'サイト名'
+  - metas.description = '説明'
+  include _config
+  - var key = 'areaindex'
+block append meta
+  +meta(metas)
+  include _inc_meta_facebook
+  +inc_meta_facebook(metas)
+block body
+  include _header.pug
+  div.detailKey.contentsmargin
+    figure.detailKey_img
+      img(src="./img/common/bnr_happymail.jpg" alt="")
+    h1.detailKey_ttl ハッピーメール
+      br
+      | #[span.detailKey_ttl-small 出会いのプロが徹底解説!!]
+  div.subrank.subcon
+    div.ranknonbg
+      div.contain
+        article.rank_item#rank1
+          div.rank_item-top
+            figure
+              a(href="" target="_blank")
+                img(src="./img/common/icon-happymail.png" alt="")
+            div.rank_item-info
+              p.rank_num.rank_num01 #[span.rank_num-area.rank_num01-area 福岡]
+                img(src="./img/common/icon-croun01.png" alt="")
+                | 第#[span.rank_num-large 1]位
+              h3.rank_subttl ハッピーメール
+              p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+          div.rank_item-kuchikomi
+            div.rank_item-prof
+              figure
+                img(src="./img/common/person01.png" alt="")
+              p.rank_item-name 恋活
+                br
+                | 編集部
+            p.rank_item-comment 見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。
+  div.appinfo.subcon
+    div.contain
+      h2.subcon_ttl ハッピーメールを編集部が分析！
+      div.contain
+        div#chart
+          canvas#cart_area
+      h3.blog_subttl ハッピーメールの基本情報
+      div.contain
+        table.appinfo_table
+          tr
+            th 運営会社
+            td 株式会社アイベック
+          tr
+            th 会員数
+            td 2000万⼈
+          tr
+            th 男⼥比
+            td #[span.appinfo_percentman.appinfo_percent60 60%]#[span.appinfo_percentwoman.appinfo_percent40 40%]
+          tr
+            th 料金体系
+            td #[span.blue 男性ポイント制]／#[span.pink 女性無料]
+          tr
+            th 運営年数
+            td 運営開始 2000年1月
+          tr
+            th 届出番号
+            td インターネット異性紹介事業届出・福岡公安委員会 ( 認定番号90080003000 )
+              br
+              | 第二種電気通信事業者届出済 届出番号H4-094
+      h3.blog_subttl ハッピーメール会員の年齢層
+      div.contain
+        table.appinfo_table
+          tr
+            th 20代
+            td #[span.appinfo_percentman.appinfo_ageman.appinfo_percent25 25%]
+              br
+              | #[span.appinfo_percentwoman.appinfo_agewoman.appinfo_percent50 50%]
+          tr
+            th 30代
+            td #[span.appinfo_percentman.appinfo_ageman.appinfo_percent30 30%]
+              br
+              | #[span.appinfo_percentwoman.appinfo_agewoman.appinfo_percent20 20%]
+          tr
+            th 40代
+            td #[span.appinfo_percentman.appinfo_ageman.appinfo_percent25 25%]
+              br
+              | #[span.appinfo_percentwoman.appinfo_agewoman.appinfo_percent20 20%]
+          tr
+            th 50代
+            td #[span.appinfo_percentman.appinfo_ageman.appinfo_percent20 20%]
+              br
+              | #[span.appinfo_percentwoman.appinfo_agewoman.appinfo_percent10 10%]
+  div.howto.subcon
+    h2.subcon_ttl ハッピーメールで出会うには？
+    div.contain
+      p.subcon_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります#[span.pink テキストがはいりますテキストがはいります]テキストがはいりますテキストがはいります。
+      div.point
+        h2.point_ttl <i class="fas fa-exclamation"></i>#[span.selif Point!]
+        ul.point_list
+          - for (var x = 0; x < 5; x++)
+            li.point_list-item テキストがはいりますテキストがはいります
+      p.subcon_text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります#[span.pink テキストがはいりますテキストがはいります。]
+      article.toarticle
+        a(href="")
+          h3.toarticle_ttl 記事への誘導テキストがはいります。
+          div.toarticle_contents
+            figure
+              img(src="img/detail/article01.jpg" alt="")
+            div.toarticle_contents-info
+              p.article_item-name
+                span.article_item-cat.cat-sky カテゴリー
+                span.article_item-date 2019.05.08
+              p.article_item-text 【令和元年】ぶっちゃけどの婚活アプリが熱いの？⼈気アプリ10社を徹底比較！
+  div.kuchikomi.subcon.bgpink
+    h2.subcon_ttl ハッピーメールの口コミ
+    div.kuchikomi_good
+      h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>良かった！口コミ
+      article.kuchikomi_item
+        p.kuchikomi_attribute <i class="fas fa-grin"></i>
+          span.kuchikomi_attribute-detail
+            | #[span.kuchikomi_attribute-num 30]代
+            br
+            | 女性
+        dl.kuchikomi_comment
+          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+            br
+            | #[span.rank_evaluation-star ★★★★★]
+          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            br
+            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+      article.kuchikomi_item
+        p.kuchikomi_attribute <i class="fas fa-grin"></i>
+          span.kuchikomi_attribute-detail
+            | #[span.kuchikomi_attribute-num 20]代
+            br
+            | 女性
+        dl.kuchikomi_comment
+          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+            br
+            | #[span.rank_evaluation-star ★★★★★]
+          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            br
+            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+    div.kuchikomi_bad
+      h3.kuchikomi_ttl.kuchikomi_bad-ttl <i class="fas fa-comment-dots"></i>悪かった…口コミ
+      article.kuchikomi_item
+        p.kuchikomi_attribute.kuchikomi_bad-attribute <i class="fas fa-grin"></i>
+          span.kuchikomi_attribute-detail
+            | #[span.kuchikomi_attribute-num 30]代
+            br
+            | 男性
+        dl.kuchikomi_comment
+          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+            br
+            | #[span.rank_evaluation-star ★★★★★]
+          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            br
+            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+      article.kuchikomi_item
+        p.kuchikomi_attribute.kuchikomi_bad-attribute <i class="fas fa-grin"></i>
+          span.kuchikomi_attribute-detail
+            | #[span.kuchikomi_attribute-num 20]代
+            br
+            | 女性
+        dl.kuchikomi_comment
+          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+            br
+            | #[span.rank_evaluation-star ★★★★★]
+          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            br
+            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+  div.download
+    p.download_btn
+      a(href="" target="_blank") ハッピーメール
+        br
+        | #[span.download_btn-to 公式WEBサイトはこちら]
+    p.download_btn
+      a(href="" target="_blank") ハッピーメール
+        br
+        | #[span.download_btn-to アプリ無料ダウンロードはこちら]
+  include _footer.pug

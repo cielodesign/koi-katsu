@@ -1,0 +1,15 @@
+// compileExpanded: ../css/$1.css
+//↑ATOMエディタでコンパイル用に使用
+@charset "utf-8";
+// Core variables and mixins
+@import 'variable';
+
+// Base
+@import 'base/base';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/side';
+@import 'layout/common';
+@import 'layout/responsive';

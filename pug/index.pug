@@ -1,0 +1,352 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = 'トップページ'
+  - metas.url = 'http://XXXX.com/'
+  - metas.image = 'http://XXXX.com/image.jpg'
+  - metas.site_name = 'サイト名'
+  - metas.description = '説明'
+  include _config
+  - var key = 'top'
+block append meta
+  +meta(metas)
+  include _inc_meta_facebook
+  +inc_meta_facebook(metas)
+block body
+  include _header.pug
+  div.main_slider.contentsmargin
+    -
+      var items = [
+        {
+          itemNum: 1,
+          itemName: 'cat-green'
+        },
+        {
+          itemNum: 2,
+          itemName: 'cat-coral'
+        }
+      ]
+    each item in items
+      div.main_slider-item
+        figure
+          img(src="./img/index/key0"+item['itemNum']+".jpg" alt="")
+        div.main_slider-info.contain
+          p.main_slider-name
+            span.main_slider-cat(class=item['itemName']) 婚活アプリ
+            span.main_slider-date 2019.05.08
+          p.main_slider-text 【令和元年】ぶっちゃけどの婚活アプリが熱いの？⼈気アプリ10社を徹底比較！
+  main.main
+    div.search.contain#search
+      h2.search_ttl Search!
+      h3.search_subttl あなたにぴったりのアプリを検索！
+      form.search_form
+        div.search_select.search_select100
+          select(name="category")
+            option(value='', selected='selected') アプリの使用目的
+            each val in ['婚活', '恋活', 'デート']
+              option(value=val) #{val}
+        div.search_select.search_select50
+          select(name="sex")
+            option(value='', selected='selected') 相手の性別
+            each val in ['男性', '女性']
+              option(value=val) #{val}
+        div.search_select.search_select50
+          select(name="age")
+            option(value='', selected='selected') 相手の年齢
+            each val in ['20代まで', '20代前半', '20代後半', '30代前半', '30代後半', '40代以上']
+              option(value=val) #{val}
+        div.search_select.search_select100
+          select(name="type")
+            option(value='', selected='selected') 相手のタイプ
+            each val in ['元気', '年収高い', 'イケメン', 'オタク', '相性が良い', '共通の趣味']
+              option(value=val) #{val}
+        input(type="submit", value="検索する").search_btn
+    div.article.content.contain
+      h2.content_ttl #[span.alpha #[span.pink A]RTICLE]
+        br
+        | 記事
+      ul.article_tab
+        li.article_tab-item.select 新着記事
+        li.article_tab-item ランキング
+      div.article_contents
+        -
+          var items = [
+            {
+              itemNum: 1,
+              itemName: 'cat-green'
+            },
+            {
+              itemNum: 2,
+              itemName: 'cat-coral'
+            },
+            {
+              itemNum: 3,
+              itemName: 'cat-greenlight'
+            },
+            {
+              itemNum: 4,
+              itemName: 'cat-orange'
+            },
+            {
+              itemNum: 5,
+              itemName: 'cat-sky'
+            }
+          ]
+        each item in items
+          article.article_item
+            figure
+              img(src="./img/index/newarticle0"+item['itemNum']+".jpg" alt="")
+            div.article_item-info
+              p.article_item-name
+                span.article_item-cat(class=item['itemName']) カテゴリー
+                span.article_item-date 2019.05.08
+              p.article_item-text 【令和元年】ぶっちゃけどの婚活アプリが熱いの？⼈気アプリ10社を徹底比較！
+      div.article_contents.hide
+        each item in items
+          article.article_item
+            figure
+              img(src="./img/index/newarticle0"+item['itemNum']+".jpg" alt="")
+              figcaption(class="article_item-caption"+item['itemNum']) #{item['itemNum']}
+            div.article_item-info
+              p.article_item-name
+                span.article_item-cat(class=item['itemName']) カテゴリー
+                span.article_item-date 2019.05.08
+              p.article_item-text 【令和元年】ぶっちゃけどの婚活アプリが熱いの？⼈気アプリ10社を徹底比較！
+      p.btn
+        a(href="") 記事⼀覧を⾒る
+    div.rank.content
+      div.contain
+        h2.content_ttl #[span.alpha #[span.pink A]PP #[span.pink R]ANKING]
+          br
+          | 恋活アプリ総合ランキング
+        article.rank_item
+          a(href="" target="_blank")
+            div.rank_item-top
+              figure
+                img(src="./img/common/icon-pairs.png" alt="")
+              div.rank_item-info
+                p.rank_num.rank_num01
+                  img(src="./img/common/icon-croun01.png" alt="")
+                  | 第#[span.rank_num-large 1]位
+                h3.rank_subttl ペアーズ(Pairs)
+                p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+            div.rank_item-bottom
+              table
+                tr
+                  th 会員数
+                  td 2000万⼈
+                tr
+                  th 男⼥比
+                  td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+                tr
+                  th 利⽤料
+                  td ⼥性無料
+        article.rank_item
+          a(href="" target="_blank")
+            div.rank_item-top
+              figure
+                img(src="./img/common/icon-happymail.png" alt="")
+              div.rank_item-info
+                p.rank_num.rank_num02
+                  img(src="./img/common/icon-croun02.png" alt="")
+                  | 第#[span.rank_num-large 2]位
+                h3.rank_subttl ハッピーメール
+                p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+            div.rank_item-bottom
+              table
+                tr
+                  th 会員数
+                  td 2000万⼈
+                tr
+                  th 男⼥比
+                  td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+                tr
+                  th 利⽤料
+                  td ⼥性無料
+        article.rank_item
+          a(href="" target="_blank")
+            div.rank_item-top
+              figure
+                img(src="./img/common/icon-with.png" alt="")
+              div.rank_item-info
+                p.rank_num.rank_num03
+                  img(src="./img/common/icon-croun03.png" alt="")
+                  | 第#[span.rank_num-large 3]位
+                h3.rank_subttl with（ウィズ）
+                p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+            div.rank_item-bottom
+              table
+                tr
+                  th 会員数
+                  td 2000万⼈
+                tr
+                  th 男⼥比
+                  td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+                tr
+                  th 利⽤料
+                  td ⼥性無料
+        article.rank_item
+          a(href="" target="_blank")
+            div.rank_item-top
+              figure
+                img(src="./img/common/icon-zexy.png" alt="")
+              div.rank_item-info
+                p.rank_num.rank_num04
+                  img(src="./img/common/icon-croun04.png" alt="")
+                  | 第#[span.rank_num-large 4]位
+                h3.rank_subttl ゼクシィ恋結び
+                p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+            div.rank_item-bottom
+              table
+                tr
+                  th 会員数
+                  td 2000万⼈
+                tr
+                  th 男⼥比
+                  td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+                tr
+                  th 利⽤料
+                  td ⼥性無料
+        article.rank_item
+          a(href="" target="_blank")
+            div.rank_item-top
+              figure
+                img(src="./img/common/icon-poiboy.png" alt="")
+              div.rank_item-info
+                p.rank_num.rank_num05
+                  img(src="./img/common/icon-croun05.png" alt="")
+                  | 第#[span.rank_num-large 5]位
+                h3.rank_subttl Poiboy(ポイボーイ)
+                p.rank_evaluation 総合評価 #[span.rank_evaluation-num 3.0] #[span.rank_evaluation-star ★★★★★]
+            div.rank_item-bottom
+              table
+                tr
+                  th 会員数
+                  td 2000万⼈
+                tr
+                  th 男⼥比
+                  td #[span.blue <i class="fal fa-mars"></i> 6] : #[span.pink 4 <i class="fal fa-venus"></i>]
+                tr
+                  th 利⽤料
+                  td ⼥性無料
+        p.btn
+          a(href="") アプリランキング⼀覧を⾒る
+    div.type.content
+      div.contain
+        h2.content_ttl #[span.alpha #[span.pink T]YPE]
+          br
+          | タイプ別マッチングアプリ一覧
+        article.type_friend
+          p.type_friend-ttl.type_subttl 友活タイプ
+          div.type_friend-area
+            figure.type_item.type_happymail
+              img(src="./img/index/type-happymail.png" alt="ハッピーメール")
+            figure.type_item.type_with
+              img(src="./img/index/type-with.png" alt="ウィズ")
+            figure.type_item.type_pairs
+              img(src="./img/index/type-pairs.png" alt="ペアーズ")
+            figure.type_item.type_dine
+              img(src="./img/index/type-dine.png" alt="dine")
+            figure.type_item.type_crossme
+              img(src="./img/index/type-crossme.png" alt="crossme")
+        article.type_love
+          p.type_love-ttl.type_subttl 恋活タイプ
+          div.type_love-area
+            figure.type_item.type_tapple
+              img(src="./img/index/type-tapple.png" alt="タップル")
+            figure.type_item.type_eveeve
+              img(src="./img/index/type-eveeve.png" alt="イヴイヴ")
+            figure.type_item.type_poiboy
+              img(src="./img/index/type-poiboy.png" alt="ぽいぼーい")
+            figure.type_item.type_tinder
+              img(src="./img/index/type-tinder.png" alt="tinder")
+            figure.type_item.type_omiai
+              img(src="./img/index/type-omiai.png" alt="omiai")
+        article.type_marriage
+          p.type_marriage-ttl.type_subttl 婚活タイプ
+          div.type_marriage-area
+            figure.type_item.type_marrish
+              img(src="./img/index/type-marrish.png" alt="marrish")
+            figure.type_item.type_zexy
+              img(src="./img/index/type-zexy.png" alt="ゼクシィ恋結び")
+            figure.type_item.type_match
+              img(src="./img/index/type-match.png" alt="match")
+            figure.type_item.type_youbride
+              img(src="./img/index/type-youbride.png" alt="youbride")
+    div.applist.content
+      div.contain
+        h2.content_ttl #[span.alpha #[span.pink A]PP #[span.pink L]IST]
+          br
+          | マッチングアプリ一覧
+          -
+            var items = [
+              {
+                itemName: 'Tinder',
+                itemFile: 'tinder',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'ハッピーメール',
+                itemFile: 'happymail',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'ウィズ',
+                itemFile: 'with',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'ゼクシィ恋結び',
+                itemFile: 'zexy',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'タップル',
+                itemFile: 'tapple',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'ペアーズ',
+                itemFile: 'pairs',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'dine',
+                itemFile: 'dine',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'marrish',
+                itemFile: 'marrish',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'youbride',
+                itemFile: 'youbride',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'イヴイヴ',
+                itemFile: 'eveeve',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'Poiboy',
+                itemFile: 'poiboy',
+                itemUrl: 'https://XXX.com'
+              },
+              {
+                itemName: 'Omiai',
+                itemFile: 'omiai',
+                itemUrl: 'https://XXX.com'
+              }
+            ]
+        ul.applist_area
+          each item in items
+            li.applist_item
+              a(href=item['itemUrl'] target="_blank")
+                img(src="./img/index/list-"+item['itemFile']+".png" alt=item['itemName'])
+                p.applist_item-text #{item['itemName']}
+        p.btn.more
+          a(href="") もっと見る
+  include _footer.pug

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* デフォルト：1380px以上用（PC用）の記述 */
+@media screen and (max-width: 1379px) {
+/* 1379px以下用（PC用）の記述 */
+}
+/* 1080px以上用（PC用）の記述 */
+@media screen and (max-width: 1079px) {
+/* 1079px以下用（タブレット用）の記述 */
+}
+
+/* 980px以上用（PC用）の記述 */
+@media screen and (max-width: 979px) {
+/* 979px以下用（タブレット用）の記述 */
+}
+@media screen and (max-width: 768px) {
+/* 768px以下用（タブレット／スマートフォン用）の記述 */
+}
+@media screen and (max-width: 639px) {
+/* 639px以下用（タブレット／スマートフォン用）の記述 */
+	.pc {display: none;}
+	.sp {display: block;}
+}
+@media screen and (max-width: 479px) {
+/* 479px以下用（スマートフォン用）の記述 */
+}

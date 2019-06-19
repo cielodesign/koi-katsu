@@ -1,0 +1,265 @@
+// compileExpanded: ../css/$1.css
+/*----------------------------------
+  Font Size
+------------------------------------*/
+@for $i from 10 through 20 {
+  .fs-#{$i * 1} {
+    font-size: ($i * .0625rem !important);
+  }
+}
+
+@for $i from 11 through 25 {
+  .fs-#{$i * 2} {
+    font-size: ($i * .125rem !important);
+  }
+}
+
+@for $i from 11 through 30 {
+  .fs-#{$i * 5} {
+    font-size: ($i * .3125rem !important);
+  }
+}
+
+/*----------------------------------
+  Display
+------------------------------------*/
+
+.display-none { display: none; }
+.display-block { display: block; }
+.display-inline { display: inline; }
+.display-inline-block { display: inline-block; }
+.display-inherit { display: inherit; }
+.display-table { display: table; }
+
+
+/*----------------------------------
+  Text Alignment
+------------------------------------*/
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-inherit { text-align: inherit; }
+.margin-center {margin: 0 auto;}
+
+/*----------------------------------
+  Pulls
+------------------------------------*/
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.pull-none { float: none; }
+
+/*----------------------------------
+  Width
+------------------------------------*/
+
+.width-auto { width: auto; }
+.width-100-percent { width: 100%; }
+
+@for $i from 1 through 10 {
+  .width-#{$i * 5} {
+    width: ($i * .3125rem);
+  }
+}
+
+@for $i from 6 through 10 {
+  .width-#{$i * 10} {
+    width: ($i * .625rem);
+  }
+}
+
+@for $i from 3 through 12 {
+  .width-#{$i * 50} {
+    width: ($i * 3.125rem);
+  }
+}
+
+
+/*----------------------------------
+  Height
+------------------------------------*/
+
+.height-auto { height: auto; }
+.height-100-percent { height: 100%; }
+
+@for $i from 1 through 10 {
+  .height-#{$i * 5} {
+    height: ($i * .3125rem);
+  }
+}
+
+@for $i from 6 through 10 {
+  .height-#{$i * 10} {
+    height: ($i * .625rem);
+  }
+}
+
+@for $i from 3 through 12 {
+  .height-#{$i * 50} {
+    height: ($i * 3.125rem);
+  }
+}
+
+/*----------------------------------
+  Margin Bottom
+------------------------------------*/
+
+.MB2 { margin-bottom: .125rem; }
+.MB4 { margin-bottom: .25rem; }
+
+@for $i from 0 through 30 {
+  .MB#{$i * 5} {
+    margin-bottom: ($i * .3125rem);
+  }
+}
+
+
+
+/*----------------------------------
+  Margin Top
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .MT#{$i * 5} {
+    margin-top: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Margin Left
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .ML#{$i * 5} {
+    margin-left: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Margin Right
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .MR#{$i * 5} {
+    margin-right: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Margin Top Overlay
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .MTO#{$i * 5} {
+    margin-top: ($i * -.3125rem);
+  }
+}
+
+/*----------------------------------
+  Margin Left Overlay
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .MLO#{$i * 5} {
+    margin-left: ($i * -.3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Margin Right Overlay
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .MRO#{$i * 5} {
+    margin-right: ($i * -.3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Padding Left
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .PL#{$i * 5} {
+    padding-left: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Padding Right
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .PR#{$i * 5} {
+    padding-right: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Padding X (left & right)
+------------------------------------*/
+
+@for $i from 0 through 30 {
+  .PX#{$i * 5} {
+    padding-left: ($i * .3125rem);
+    padding-right: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Padding Y (top & bottom)
+------------------------------------*/
+
+@for $i from 0 through 60 {
+  .PY#{$i * 5} {
+    padding-top: ($i * .3125rem);
+    padding-bottom: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Ul li padding X (left & right)
+------------------------------------*/
+
+@for $i from 0 through 5 {
+  .ul-li-lr-#{$i} > li {
+  	padding-left: ($i * .0625rem);
+		padding-right: ($i * .0625rem);
+  }
+}
+
+@for $i from 2 through 4 {
+  .ul-li-lr-#{$i * 5} > li {
+    padding-left: ($i * .3125rem);
+    padding-right: ($i * .3125rem);
+  }
+}
+
+
+/*----------------------------------
+  Ul li padding Y (top & bottom)
+------------------------------------*/
+
+@for $i from 0 through 5 {
+  .ul-li-tb-#{$i} > li {
+  	padding-top: ($i * .0625rem);
+		padding-bottom: ($i * .0625rem);
+  }
+}
+
+@for $i from 2 through 4 {
+  .ul-li-tb-#{$i * 5} > li {
+    padding-top: ($i * .3125rem);
+    padding-bottom: ($i * .3125rem);
+  }
+}
