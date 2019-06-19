@@ -87,7 +87,7 @@
         <h2 class="subcon_ttl">ハッピーメールを編集部が分析！</h2>
         <div class="contain">
           <div id="chart">
-            <canvas id="cart_area"></canvas>
+            <canvas id="chart_area"></canvas>
           </div>
         </div>
         <h3 class="blog_subttl">ハッピーメールの基本情報</h3>
@@ -223,6 +223,51 @@
         <div class="footer_copy">&copy; 恋活.com</div>
       </div>
     </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="//unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+      //グラフの値
+      new Vue({
+       el: '#chart',
+       methods: {
+         creatChart: function () {
+           //グラフ描画
+           config = {
+             type: 'radar',
+             data: {
+               labels: ["利用者数", "料金システム", "運営会社信頼度", "本気の出会い度", "サポート体制"],
+               datasets: [{
+                 borderColor: '#f47da2',
+                 backgroundColor: 'rgba(242,92,123,0.2)',
+                 pointBorderColor: "#fff",
+                 pointHoverBackgroundColor: "#fff",
+                 hitRadius: 5,
+                 data: [3.5, 4, 2, 5, 3]
+               }]
+             },
+             options: {
+               scale: {
+                 ticks: {
+                   beginAtZero: true,
+                   max: 5,
+                   min: 0
+                 }
+               },
+               legend: {
+                 display: false
+               }
+             }
+           };
+           chart = new Chart(document.getElementById('chart_area').getContext('2d'), config);
+         }
+       },
+       mounted: function () {
+         //画面読み込み時に実行
+         this.creatChart();
+       }
+      });
+    </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/hiraku.min.js"></script>

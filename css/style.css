@@ -2405,6 +2405,10 @@ input, select {
   padding: 15px 0 27px;
 }
 
+#chart {
+  margin-bottom: 28px;
+}
+
 .appinfo {
   margin-bottom: 42px;
 }
@@ -2891,7 +2895,11 @@ input, select {
 }
 
 .download {
-  padding: 15px 0;
+  padding: 15px 0 6px;
+}
+
+.download_btn {
+  margin-bottom: 20px;
 }
 
 .download_btn a {
@@ -2900,6 +2908,8 @@ input, select {
   text-align: center;
   background: #13b5b1;
   border-bottom: solid 5px #0d7e7c;
+  color: #fff;
+  border-radius: 20px;
 }
 
 /* デフォルト：1380px以上用（PC用）の記述 */

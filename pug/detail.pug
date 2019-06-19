@@ -47,7 +47,7 @@ block body
       h2.subcon_ttl ハッピーメールを編集部が分析！
       div.contain
         div#chart
-          canvas#cart_area
+          canvas#chart_area
       h3.blog_subttl ハッピーメールの基本情報
       div.contain
         table.appinfo_table
@@ -184,3 +184,47 @@ block body
           br
           | #[span.download_btn-to アプリ無料ダウンロードはこちら]
   include _footer.pug
+  script(src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js")
+  script(src="//unpkg.com/vue-chartjs/dist/vue-chartjs.min.js")
+  script(src="//cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js")
+  script
+    |//グラフの値
+    |new Vue({
+    |  el: '#chart',
+    |  methods: {
+    |    creatChart: function () {
+    |      //グラフ描画
+    |      config = {
+    |        type: 'radar',
+    |        data: {
+    |          labels: ["利用者数", "料金システム", "運営会社信頼度", "本気の出会い度", "サポート体制"],
+    |          datasets: [{
+    |            borderColor: '#f47da2',
+    |            backgroundColor: 'rgba(242,92,123,0.2)',
+    |            pointBorderColor: "#fff",
+    |            pointHoverBackgroundColor: "#fff",
+    |            hitRadius: 5,
+    |            data: [3.5, 4, 2, 5, 3]
+    |          }]
+    |        },
+    |        options: {
+    |          scale: {
+    |            ticks: {
+    |              beginAtZero: true,
+    |              max: 5,
+    |              min: 0
+    |            }
+    |          },
+    |          legend: {
+    |            display: false
+    |          }
+    |        }
+    |      };
+    |      chart = new Chart(document.getElementById('chart_area').getContext('2d'), config);
+    |    }
+    |  },
+    |  mounted: function () {
+    |    //画面読み込み時に実行
+    |    this.creatChart();
+    |  }
+    |});
