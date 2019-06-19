@@ -43,8 +43,8 @@ block body
                 | 編集部
             p.rank_item-comment 見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。見出しの文章が入ります。
   div.appinfo.subcon
+    h2.subcon_ttl ハッピーメールを編集部が分析！
     div.contain
-      h2.subcon_ttl ハッピーメールを編集部が分析！
       div.contain
         div#chart
           canvas#chart_area
@@ -68,7 +68,7 @@ block body
             td 運営開始 2000年1月
           tr
             th 届出番号
-            td インターネット異性紹介事業届出・福岡公安委員会 ( 認定番号90080003000 )
+            td.fs-10.lineheight-12 インターネット異性紹介事業届出・福岡公安委員会 ( 認定番号90080003000 )
               br
               | 第二種電気通信事業者届出済 届出番号H4-094
       h3.blog_subttl ハッピーメール会員の年齢層
@@ -94,6 +94,16 @@ block body
             td #[span.appinfo_percentman.appinfo_ageman.appinfo_percent20 20%]
               br
               | #[span.appinfo_percentwoman.appinfo_agewoman.appinfo_percent10 10%]
+    div.download
+      div.contain
+        p.download_btn
+          a(href="" target="_blank") ハッピーメール
+            br
+            | #[span.download_btn-to 公式WEBサイトはこちら]
+        p.download_btn
+          a(href="" target="_blank") ハッピーメール
+            br
+            | #[span.download_btn-to アプリ無料ダウンロードはこちら]
   div.howto.subcon
     h2.subcon_ttl ハッピーメールで出会うには？
     div.contain
@@ -115,74 +125,85 @@ block body
                 span.article_item-cat.cat-sky カテゴリー
                 span.article_item-date 2019.05.08
               p.article_item-text 【令和元年】ぶっちゃけどの婚活アプリが熱いの？⼈気アプリ10社を徹底比較！
-  div.kuchikomi.subcon.bgpink
-    h2.subcon_ttl ハッピーメールの口コミ
-    div.kuchikomi_good
-      h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>良かった！口コミ
-      article.kuchikomi_item
-        p.kuchikomi_attribute <i class="fas fa-grin"></i>
-          span.kuchikomi_attribute-detail
-            | #[span.kuchikomi_attribute-num 30]代
+    div.download
+      div.contain
+        p.download_btn
+          a(href="" target="_blank") ハッピーメール
             br
-            | 女性
-        dl.kuchikomi_comment
-          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+            | #[span.download_btn-to 公式WEBサイトはこちら]
+        p.download_btn
+          a(href="" target="_blank") ハッピーメール
             br
-            | #[span.rank_evaluation-star ★★★★★]
-          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+            | #[span.download_btn-to アプリ無料ダウンロードはこちら]
+  div.kuchikomi.subcon
+    div.bgpink
+      h2.subcon_ttl ハッピーメールの口コミ
+      div.kuchikomi_good
+        h3.kuchikomi_ttl <i class="fas fa-comment-dots"></i>良かった！口コミ
+        article.kuchikomi_item
+          p.kuchikomi_attribute <i class="fas fa-grin"></i>
+            span.kuchikomi_attribute-detail
+              | #[span.kuchikomi_attribute-num 30]代
+              br
+              | 女性
+          dl.kuchikomi_comment
+            dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+              br
+              | #[span.rank_evaluation-star ★★★★★]
+            dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+              br
+              | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+        article.kuchikomi_item
+          p.kuchikomi_attribute <i class="fas fa-grin"></i>
+            span.kuchikomi_attribute-detail
+              | #[span.kuchikomi_attribute-num 20]代
+              br
+              | 女性
+          dl.kuchikomi_comment
+            dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+              br
+              | #[span.rank_evaluation-star ★★★★★]
+            dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+              br
+              | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+      div.kuchikomi_bad
+        h3.kuchikomi_ttl.kuchikomi_bad-ttl <i class="fas fa-comment-dots"></i>悪かった…口コミ
+        article.kuchikomi_item
+          p.kuchikomi_attribute.kuchikomi_bad-attribute <i class="fas fa-frown"></i>
+            span.kuchikomi_attribute-detail
+              | #[span.kuchikomi_attribute-num 30]代
+              br
+              | 男性
+          dl.kuchikomi_comment
+            dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+              br
+              | #[span.rank_evaluation-star ★★★★★]
+            dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+              br
+              | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+        article.kuchikomi_item
+          p.kuchikomi_attribute.kuchikomi_bad-attribute <i class="fas fa-frown"></i>
+            span.kuchikomi_attribute-detail
+              | #[span.kuchikomi_attribute-num 20]代
+              br
+              | 女性
+          dl.kuchikomi_comment
+            dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
+              br
+              | #[span.rank_evaluation-star ★★★★★]
+            dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+              br
+              | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
+    div.download
+      div.contain
+        p.download_btn
+          a(href="" target="_blank") ハッピーメール
             br
-            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-      article.kuchikomi_item
-        p.kuchikomi_attribute <i class="fas fa-grin"></i>
-          span.kuchikomi_attribute-detail
-            | #[span.kuchikomi_attribute-num 20]代
+            | #[span.download_btn-to 公式WEBサイトはこちら]
+        p.download_btn
+          a(href="" target="_blank") ハッピーメール
             br
-            | 女性
-        dl.kuchikomi_comment
-          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
-            br
-            | #[span.rank_evaluation-star ★★★★★]
-          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-            br
-            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-    div.kuchikomi_bad
-      h3.kuchikomi_ttl.kuchikomi_bad-ttl <i class="fas fa-comment-dots"></i>悪かった…口コミ
-      article.kuchikomi_item
-        p.kuchikomi_attribute.kuchikomi_bad-attribute <i class="fas fa-grin"></i>
-          span.kuchikomi_attribute-detail
-            | #[span.kuchikomi_attribute-num 30]代
-            br
-            | 男性
-        dl.kuchikomi_comment
-          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
-            br
-            | #[span.rank_evaluation-star ★★★★★]
-          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-            br
-            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-      article.kuchikomi_item
-        p.kuchikomi_attribute.kuchikomi_bad-attribute <i class="fas fa-grin"></i>
-          span.kuchikomi_attribute-detail
-            | #[span.kuchikomi_attribute-num 20]代
-            br
-            | 女性
-        dl.kuchikomi_comment
-          dt.kuchikomi_comment-ttl やっとここで出会えました！安心して利用できます！
-            br
-            | #[span.rank_evaluation-star ★★★★★]
-          dd.kuchikomi_comment-text テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-            br
-            | テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。
-  div.download
-    div.contain
-      p.download_btn
-        a(href="" target="_blank") ハッピーメール
-          br
-          | #[span.download_btn-to 公式WEBサイトはこちら]
-      p.download_btn
-        a(href="" target="_blank") ハッピーメール
-          br
-          | #[span.download_btn-to アプリ無料ダウンロードはこちら]
+            | #[span.download_btn-to アプリ無料ダウンロードはこちら]
   include _footer.pug
   script(src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js")
   script(src="//unpkg.com/vue-chartjs/dist/vue-chartjs.min.js")

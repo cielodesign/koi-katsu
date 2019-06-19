@@ -273,7 +273,7 @@
 			font-size: 0.75rem;
 			color: $color-white;
 			margin-right: $icon-margin;
-			padding: 4px 10px;
+			padding: 2px 6px;
 		}
 		&-date {
 			font-size: 0.6875rem;
@@ -603,6 +603,7 @@
 }
 
 .subcon {
+	margin-bottom: 42px;
 	&_ttl {
 		color: $color-white;
 		background: $color-pink-dark;
@@ -672,7 +673,7 @@
 }
 
 .kuchikomi {
-	&.bgpink {
+	.bgpink {
 		padding-bottom: 2px;
 	}
 	&_ttl {
@@ -780,6 +781,9 @@
 				background: $color-blue;
 			}
 		}
+	}
+	.download {
+		padding: 15px 0 0;
 	}
 }
 
@@ -1058,7 +1062,7 @@
 	.rank{
 		&_item {
 			box-shadow: none;
-			padding: 15px 0 27px;
+			padding: 15px 0 0;
 		}
 	}
 }
@@ -1116,9 +1120,9 @@
 }
 .toarticle {
 	border: 1px solid $color-border;
-	border-radius: 20px;
+	border-radius: 10px;
 	padding: 15px;
-	margin-bottom: 42px;
+	margin-bottom: 30px;
 	&_ttl {
 		color: $color-pink-dark;
 		font-size: 0.75rem;
@@ -1137,17 +1141,25 @@
 	}
 }
 .download {
-	padding: 15px 0 6px;
 	&_btn {
 		margin-bottom: 20px;
 		a {
 			display: block;
-			padding: 8px 0 6px;
+			padding: 8px 0 10px;
 			text-align: center;
 			background: $color-green;
 			border-bottom: solid 5px $color-green-border;
 			color: $color-white;
-			border-radius: 20px;
+			border-radius: 10px;
+			font-weight: 700;
+		}
+		&-to {
+			color: $color-green;
+			background: $color-white;
+			width: 265px;
+			border-radius: 22px;
+			display: inline-block;
+			margin-top: 5px;
 		}
 	}
 }
