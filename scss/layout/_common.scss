@@ -765,6 +765,7 @@
 		margin-bottom: 30px;
 		box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 		.kuchikomi_item:last-of-type {
+			padding-bottom: 0;
 			border-bottom: none;
 		}
 	}

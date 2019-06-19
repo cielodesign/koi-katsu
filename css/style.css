@@ -1942,6 +1942,7 @@ input, select {
 }
 
 .kuchikomi_good .kuchikomi_item:last-of-type, .kuchikomi_bad .kuchikomi_item:last-of-type {
+  padding-bottom: 0;
   border-bottom: none;
 }
 
