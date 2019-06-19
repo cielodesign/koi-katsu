@@ -168,7 +168,7 @@ input, select {
 	margin-bottom: 16px;
 }
 
-@mixin colorbtn($bgcolor: $color-green,$bordercolor: #0d7e7c,$fontsize: 0.875rem) {
+@mixin colorbtn($bgcolor: $color-green,$bordercolor: $color-green-border,$fontsize: 0.875rem) {
 	width: 100%;
 	background: $bgcolor;
 	color: $color-white;

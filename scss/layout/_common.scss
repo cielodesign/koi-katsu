@@ -672,6 +672,9 @@
 }
 
 .kuchikomi {
+	&.bgpink {
+		padding-bottom: 2px;
+	}
 	&_ttl {
 		background: $color-skyblue;
 		color: $color-white;
@@ -759,10 +762,9 @@
 	}
 	&_good, &_bad {
 		width: 96%;
-		margin: 0 auto;
+		margin: 0 auto 15px;
 		background: $color-white;
 		padding: 15px;
-		margin-bottom: 30px;
 		box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 		.kuchikomi_item:last-of-type {
 			padding-bottom: 0;
@@ -1127,6 +1129,18 @@
 		&-info {
 			width: calc(420/630*100%);
 			color: $color-text;
+		}
+	}
+}
+.download {
+	padding: 15px 0;
+	&_btn {
+		a {
+			display: block;
+			padding: 8px 0 6px;
+			text-align: center;
+			background: $color-green;
+			border-bottom: solid 5px $color-green-border;
 		}
 	}
 }
